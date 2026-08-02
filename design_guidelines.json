@@ -1,0 +1,160 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy) - Premium Minimalist",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F7F5F2",
+    "surface_secondary": "#EAE6DF",
+    "primary": "#C6A87C", 
+    "primary_hover": "#B39569",
+    "text_main": "#1C1917",
+    "text_muted": "#57534E",
+    "border": "#E5E0D8",
+    "accent": "#9E8156"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Cormorant Garamond, serif",
+      "weights": ["400", "500", "600"],
+      "styles": "tracking-tight"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"]
+    }
+  },
+  "spacing": {
+    "section_y": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "gap_standard": "gap-8 md:gap-12",
+    "element_spacing": "space-y-6"
+  },
+  "surfaces_and_borders": {
+    "card_radius": "rounded-2xl",
+    "button_radius": "rounded-full",
+    "shadow_soft": "shadow-[0_8px_30px_rgba(0,0,0,0.04)]",
+    "shadow_hover": "shadow-[0_20px_40px_rgba(0,0,0,0.08)]",
+    "header_glass": "backdrop-blur-xl bg-white/70 border-b border-[#E5E0D8]/50"
+  },
+  "animations": {
+    "transition_standard": "transition-all duration-300 ease-out",
+    "hover_lift": "hover:-translate-y-1",
+    "fade_in_up": "initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}"
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "sections": [
+        "Hero: Split layout or full width with overlaid text. Image: home_hero",
+        "Personal Intro: Large elegant typography for a quote, image of the creator.",
+        "Course Teaser: 3-column bento highlighting the core pillars.",
+        "Features/Highlights: Zig-zag image and text blocks.",
+        "Testimonials: Large quote style with minimalist portrait.",
+        "Social Proof: Minimalist number counters.",
+        "Pricing Preview: Clean minimal card with warm beige accent.",
+        "Final CTA: Centered, prominent button."
+      ]
+    },
+    {
+      "name": "About",
+      "sections": [
+        "Hero: 'My Journey / Portfolio' title with abstract background.",
+        "Portfolio Gallery: Asymmetric bento grid of filmmaking projects.",
+        "Behind the Scenes: Text block paired with professional film set lighting images."
+      ]
+    },
+    {
+      "name": "Course",
+      "sections": [
+        "Hero: Full-width cinematic banner (course_hero).",
+        "Overview: What you'll learn grid.",
+        "Modules: Shadcn accordion with minimal borders.",
+        "Who it's for: 2-column checklist.",
+        "Bonuses: Small minimalist cards.",
+        "1-on-1 Mentoring: High-impact section with mentoring_call image and CTA.",
+        "Pricing: Single prominent block.",
+        "FAQ: Accordion style."
+      ]
+    },
+    {
+      "name": "Contact",
+      "sections": [
+        "Hero: Simple header.",
+        "Form: Clean lines, warm beige focus rings.",
+        "Info: Minimalist contact details and social links."
+      ]
+    },
+    {
+      "name": "Blog",
+      "sections": [
+        "Hero: 'Journal & Insights'.",
+        "Articles: Grid of cards with image, title, excerpt."
+      ]
+    }
+  ],
+  "components": {
+    "navigation": "Sticky nav at top, logo left, links center, CTA right. Glassmorphism effect.",
+    "buttons": "Primary: bg-[#C6A87C] text-white hover:bg-[#B39569]. Secondary: border border-[#E5E0D8] text-[#1C1917] hover:bg-[#F7F5F2]. Rounded-full for organic feel.",
+    "cards": "bg-white rounded-2xl p-8 border border-[#E5E0D8] shadow-[0_8px_30px_rgba(0,0,0,0.04)]",
+    "inputs": "bg-transparent border-b border-[#E5E0D8] rounded-none focus:border-[#C6A87C] focus:ring-0 px-0 py-3"
+  },
+  "media": {
+    "images": [
+      {
+        "category": "home_hero",
+        "url": "https://static.prod-images.emergentagent.com/jobs/73ae5807-027a-4093-963f-fcac8fc5a992/images/713808d7942774755a3630b61a1447ce986c93bf8a91add947a153d6a8615886.png",
+        "description": "High-end cinematic photography of a film director looking through a viewfinder, warm beige"
+      },
+      {
+        "category": "course_hero",
+        "url": "https://static.prod-images.emergentagent.com/jobs/73ae5807-027a-4093-963f-fcac8fc5a992/images/69f64261b9ae8a88d11e788841a627baed4667dc661e08fb0b86fc3dc3b02e91.png",
+        "description": "Abstract minimalist background with warm beige tones"
+      },
+      {
+        "category": "mentoring_call",
+        "url": "https://static.prod-images.emergentagent.com/jobs/73ae5807-027a-4093-963f-fcac8fc5a992/images/11bbff7bdb28ccae5817fb1507f351f1c6d08253678d3366834855f35a8e670b.png",
+        "description": "Two people in a stylish minimalist cafe having a creative mentoring session"
+      },
+      {
+        "category": "portfolio_cover",
+        "url": "https://static.prod-images.emergentagent.com/jobs/73ae5807-027a-4093-963f-fcac8fc5a992/images/e57188b09bc03bedeb5af11e0dfcc2b7081ff1d8f1d4b300a7d2c5f8e7bf4700.png",
+        "description": "Close up of a cinema camera lens with beautiful flares"
+      },
+      {
+        "category": "portfolio_1",
+        "url": "https://images.unsplash.com/photo-1761499930744-1d689014c9a6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwyfHxjaW5lbWF0aWMlMjBmaWxtJTIwZGlyZWN0b3IlMjBiZWhpbmQlMjBzY2VuZXN8ZW58MHx8fHwxNzc2MjQ0NDk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Two people holding a professional cinema camera rig."
+      },
+      {
+        "category": "portfolio_2",
+        "url": "https://images.unsplash.com/photo-1758390851031-bcf34075ca61?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBmaWxtJTIwZGlyZWN0b3IlMjBiZWhpbmQlMjBzY2VuZXN8ZW58MHx8fHwxNzc2MjQ0NDk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Filmmaker operating a professional video camera rig"
+      },
+      {
+        "category": "blog_1",
+        "url": "https://images.unsplash.com/photo-1555872878-86c9fe52a0da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwY2luZW1hJTIwY2FtZXJhJTIwbGVuc3xlbnwwfHx8fDE3NzYyNDQ0OTl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "black and grey classic film camera on top of desk"
+      },
+      {
+        "category": "blog_2",
+        "url": "https://images.unsplash.com/photo-1769699167704-33f5c2bbf3e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmaWxtJTIwc2V0JTIwbGlnaHRpbmd8ZW58MHx8fHwxNzc2MjQ0NDk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional studio lighting equipment"
+      },
+      {
+        "category": "behind_the_scenes",
+        "url": "https://images.unsplash.com/photo-1695192655920-00dfc0c1ea22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHxjaW5lbWF0aWMlMjBmaWxtJTIwZGlyZWN0b3IlMjBiZWhpbmQlMjBzY2VuZXN8ZW58MHx8fHwxNzc2MjQ0NDk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "two men in a dark room with a camera"
+      }
+    ]
+  },
+  "technical_instructions": [
+    "Use react-router-dom for multi-page navigation.",
+    "Ensure global scroll behavior is smooth (consider Lenis or framer-motion).",
+    "In tailwind.config.js, add the custom fonts: Cormorant Garamond for serif/headings, Manrope for sans/body.",
+    "Add custom colors to tailwind config extend: brand-primary (#C6A87C), brand-surface (#F7F5F2), brand-border (#E5E0D8), brand-text (#1C1917).",
+    "Use Lucide-react for icons (minimal and elegant).",
+    "Forms should have custom styling (remove default Shadcn borders, use bottom borders only for inputs for a premium feel).",
+    "Testimonials can use large serif quotes.",
+    "Add data-testid attributes to all interactive elements for testing."
+  ]
+}
