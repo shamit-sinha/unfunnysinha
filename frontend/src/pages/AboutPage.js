@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollAnimation, useScrollAnimationMultiple } from '@/hooks/useScrollAnimation';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, Instagram, Play } from 'lucide-react';
 
 function AnimatedSection({ className = '', children, variant = 'up' }) {
   const ref = useScrollAnimation();
@@ -13,6 +13,16 @@ function StaggerSection({ className = '', children }) {
   const ref = useScrollAnimationMultiple();
   return <div ref={ref} className={`stagger-children ${className}`}>{children}</div>;
 }
+
+const freelanceVideos = [
+  { type: 'instagram', url: 'https://www.instagram.com/p/Dawv2QBy9dU/?hl=en' },
+  { type: 'instagram', url: 'https://www.instagram.com/p/DUHSsLKDZb_/?hl=en' },
+  { type: 'instagram', url: 'https://www.instagram.com/p/DW-suZnp9a0/?hl=en' },
+  { type: 'instagram', url: 'https://www.instagram.com/p/DMvIJY4yTZi/?hl=en' },
+  { type: 'instagram', url: 'https://www.instagram.com/p/DWeehEgkWIK/?hl=en' },
+  { type: 'drive', embedUrl: 'https://drive.google.com/file/d/16nxFyfwkIVaIaaxsTqssJXiqkmz6XhbT/preview' },
+  { type: 'drive', embedUrl: 'https://drive.google.com/file/d/1mxUQdrZfoBXFIPwVcccPFTOEvdU2qWLF/preview' },
+];
 
 const projects = [
   {
@@ -207,22 +217,48 @@ export default function AboutPage() {
       {/* Freelance Work Section */}
       <section data-testid="section-freelance" className="py-24 md:py-32 border-t border-brand-border/40 bg-brand-surface">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            <div className="flex flex-col justify-center">
-              <AnimatedSection>
-                <span className="font-body text-[11px] uppercase tracking-[0.3em] text-brand-primary mb-4 block">04</span>
-                <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text tracking-tight leading-[1.05]">Freelance Work</h2>
-                <p className="font-body text-sm md:text-base text-brand-muted leading-relaxed mt-6 max-w-sm">
-                  Client projects spanning music videos, brand films, and creative campaigns.
-                </p>
-              </AnimatedSection>
-            </div>
-            <AnimatedSection>
-              <div className="aspect-video bg-brand-surface-secondary border border-brand-border flex items-center justify-center">
-                <p className="font-body text-xs text-brand-muted tracking-wide uppercase">Coming soon</p>
+          <AnimatedSection>
+            <span className="font-body text-[11px] uppercase tracking-[0.3em] text-brand-primary mb-4 block">04</span>
+            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text tracking-tight leading-[1.05]">Freelance Work</h2>
+            <p className="font-body text-sm md:text-base text-brand-muted leading-relaxed mt-6 max-w-lg">
+              Client projects spanning music videos, brand films, and creative campaigns.
+            </p>
+          </AnimatedSection>
+
+          <StaggerSection className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-16">
+            {freelanceVideos.map((video, idx) => (
+              <div
+                key={idx}
+                data-testid={`freelance-video-${idx}`}
+                className="aspect-[9/16] sm:aspect-video bg-brand-surface-secondary border border-brand-border overflow-hidden relative group"
+              >
+                {video.type === 'drive' ? (
+                  <iframe
+                    src={video.embedUrl}
+                    title={`Freelance project ${idx + 1}`}
+                    className="w-full h-full"
+                    allow="autoplay"
+                    allowFullScreen
+                  />
+                ) : (
+                  <a
+                    href={video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center w-full h-full gap-3 hover:bg-brand-surface transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full border border-brand-border flex items-center justify-center group-hover:border-brand-primary group-hover:text-brand-primary transition-colors">
+                      <Play className="w-4 h-4 ml-0.5" />
+                    </div>
+                    <span className="font-body text-[11px] uppercase tracking-[0.2em] text-brand-muted flex items-center gap-2 group-hover:text-brand-text transition-colors">
+                      <Instagram className="w-3.5 h-3.5" />
+                      View on Instagram
+                    </span>
+                  </a>
+                )}
               </div>
-            </AnimatedSection>
-          </div>
+            ))}
+          </StaggerSection>
         </div>
       </section>
     </div>
