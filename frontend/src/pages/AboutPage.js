@@ -151,7 +151,7 @@ export default function AboutPage() {
             </div>
             <AnimatedSection className="lg:col-span-3">
               <div className="grid grid-cols-2 gap-8">
-                
+                <a
                   href="https://www.youtube.com/watch?v=whVxe_igPbM&t=2s"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -164,7 +164,7 @@ export default function AboutPage() {
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
                 </a>
-                
+                <a
                   href="https://www.youtube.com/watch?v=-3FLyv7Qfso&t=1s"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -199,7 +199,7 @@ export default function AboutPage() {
             <StaggerSection>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {shortFilms.map((film, idx) => (
-                  
+                  <a
                     key={idx}
                     href={`https://youtu.be/${film.youtubeId}`}
                     target="_blank"
@@ -245,7 +245,7 @@ export default function AboutPage() {
             <StaggerSection>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {ugcVideos.map((video, idx) => (
-                  
+                  <a
                     key={idx}
                     href={video.url}
                     target="_blank"
@@ -295,7 +295,7 @@ export default function AboutPage() {
                     allowFullScreen
                   />
                 ) : (
-                  
+                  <a
                     href={video.url}
                     target="_blank"
                     rel="noopener noreferrer"
