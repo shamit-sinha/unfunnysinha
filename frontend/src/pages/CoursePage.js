@@ -120,7 +120,7 @@ export default function CoursePage() {
                   data-testid="course-payment-button"
                   className="inline-flex items-center gap-2 px-10 py-4 border border-brand-text text-brand-text font-body text-[11px] tracking-[0.15em] hover:bg-brand-text hover:text-white transition-all duration-300 cursor-pointer"
                 >
-                  ENROLL NOW — &#8377;1399
+                  ENROLL NOW — &#8377;1199
                 </a>
               </div>
             </div>
