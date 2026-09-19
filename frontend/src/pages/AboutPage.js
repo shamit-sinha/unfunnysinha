@@ -14,6 +14,19 @@ function StaggerSection({ className = '', children }) {
   return <div ref={ref} className={`stagger-children ${className}`}>{children}</div>;
 }
 
+const shortFilms = [
+  { title: 'A Housewarming Gone Wrong', youtubeId: '4z1FMd8fqJY' },
+  { title: 'I Love Music', youtubeId: 'Q2r9nCgVvJk' },
+  { title: 'Chasing the Escaping Sun', youtubeId: 'GzoPyoBwcsM' },
+  { title: 'All Izz Well (Music Video)', youtubeId: '4_EAgz4pDLs' },
+];
+
+const ugcVideos = [
+  { url: 'https://www.instagram.com/reel/DMvIJY4yTZi/?stkn=MzRlODBiNWFlZA==', label: 'IIT Jodhpur' },
+  { url: 'https://www.instagram.com/reel/DM8A-XgSUJD/?stkn=MzRlODBiNWFlZA==', label: 'IIT Jodhpur' },
+  { url: 'https://www.instagram.com/reel/DclXg_SFYE6/?stkn=MzRlODBiNWFlZA==', label: 'True Meds' },
+];
+
 const freelanceVideos = [
   { type: 'instagram', url: 'https://www.instagram.com/p/Dawv2QBy9dU/?hl=en' },
   { type: 'instagram', url: 'https://www.instagram.com/p/DUHSsLKDZb_/?hl=en' },
@@ -138,7 +151,7 @@ export default function AboutPage() {
             </div>
             <AnimatedSection className="lg:col-span-3">
               <div className="grid grid-cols-2 gap-8">
-                <a
+                
                   href="https://www.youtube.com/watch?v=whVxe_igPbM&t=2s"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -151,7 +164,7 @@ export default function AboutPage() {
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
                 </a>
-                <a
+                
                   href="https://www.youtube.com/watch?v=-3FLyv7Qfso&t=1s"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -183,11 +196,35 @@ export default function AboutPage() {
                 </p>
               </AnimatedSection>
             </div>
-            <AnimatedSection>
-              <div className="aspect-video bg-brand-surface-secondary border border-brand-border flex items-center justify-center">
-                <p className="font-body text-xs text-brand-muted tracking-wide uppercase">Coming soon</p>
+            <StaggerSection>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {shortFilms.map((film, idx) => (
+                  
+                    key={idx}
+                    href={`https://youtu.be/${film.youtubeId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`short-film-${idx}`}
+                    className="group relative block aspect-video overflow-hidden bg-brand-surface-secondary border border-brand-border"
+                  >
+                    <img
+                      src={`https://img.youtube.com/vi/${film.youtubeId}/hqdefault.jpg`}
+                      alt={film.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/40 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary/20 transition-colors">
+                        <Play className="w-4 h-4 ml-0.5 text-white" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+                      <span className="font-body text-[11px] uppercase tracking-wide text-white">{film.title}</span>
+                    </div>
+                  </a>
+                ))}
               </div>
-            </AnimatedSection>
+            </StaggerSection>
           </div>
         </div>
       </section>
@@ -205,11 +242,28 @@ export default function AboutPage() {
                 </p>
               </AnimatedSection>
             </div>
-            <AnimatedSection>
-              <div className="aspect-video bg-brand-surface border border-brand-border flex items-center justify-center">
-                <p className="font-body text-xs text-brand-muted tracking-wide uppercase">Coming soon</p>
+            <StaggerSection>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {ugcVideos.map((video, idx) => (
+                  
+                    key={idx}
+                    href={video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`ugc-video-${idx}`}
+                    className="group aspect-[9/16] bg-brand-surface border border-brand-border overflow-hidden relative flex flex-col items-center justify-center gap-3 hover:bg-brand-surface-secondary transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-full border border-brand-border flex items-center justify-center group-hover:border-brand-primary group-hover:text-brand-primary transition-colors">
+                      <Play className="w-4 h-4 ml-0.5" />
+                    </div>
+                    <span className="font-body text-[11px] uppercase tracking-[0.2em] text-brand-muted flex items-center gap-2 group-hover:text-brand-text transition-colors text-center px-2">
+                      <Instagram className="w-3.5 h-3.5 shrink-0" />
+                      {video.label}
+                    </span>
+                  </a>
+                ))}
               </div>
-            </AnimatedSection>
+            </StaggerSection>
           </div>
         </div>
       </section>
@@ -241,7 +295,7 @@ export default function AboutPage() {
                     allowFullScreen
                   />
                 ) : (
-                  <a
+                  
                     href={video.url}
                     target="_blank"
                     rel="noopener noreferrer"
