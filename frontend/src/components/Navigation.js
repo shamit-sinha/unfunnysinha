@@ -74,7 +74,7 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <a
-          href="https://rzp.io/rzp/tWIXXs4S"
+          href="https://rzp.io/rzp/XtAfhZf"
           target="_blank"
           rel="noopener noreferrer"
           data-testid="nav-cta-button"
@@ -116,7 +116,7 @@ export default function Navigation() {
               </Link>
             ))}
             <a
-              href="https://rzp.io/rzp/tWIXXs4S"
+              href="https://rzp.io/rzp/XtAfhZf"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="mobile-nav-cta"
