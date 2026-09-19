@@ -36,14 +36,17 @@ const winners = [
 
 export default function CoursePage() {
   return (
-    <div data-testid="course-page">
+    // FIX 1: pt-20 (80px) pushes the whole page below the fixed top bar.
+    // If your navbar is taller/shorter, change it: pt-16 = 64px, pt-24 = 96px.
+    <div data-testid="course-page" className="pt-20">
       {/* Photo — full width, top of page */}
       <section data-testid="course-hero-photo" className="w-full">
         <div className="aspect-video w-full overflow-hidden">
+          {/* FIX 2: object-top keeps the top of the photo (head/face) from being cropped */}
           <img
             src="/course-instructor.jpg"
             alt="Unfunny Sinha in his home studio"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
             data-testid="course-hero-image"
           />
         </div>
