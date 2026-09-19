@@ -60,7 +60,7 @@ export default function CoursePage() {
               The Workshop 2.0
             </span>
             <h1
-              className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-text leading-[1.05] tracking-tight animate-fade-in"
+              className="font-heading text-2xl sm:text-4xl lg:text-6xl font-bold text-brand-text leading-[1.05] tracking-tight whitespace-nowrap animate-fade-in"
               style={{ animationDelay: '400ms', animationFillMode: 'both' }}
             >
               Learn filmmaking the way I did
