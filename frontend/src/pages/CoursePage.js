@@ -37,13 +37,13 @@ export default function CoursePage() {
                 </p>
                 <div className="flex items-center gap-6 pt-2">
                   <a
-                    href="https://rzp.io/rzp/tWIXXs4S"
+                    href="https://rzp.io/rzp/XtAfhZf"
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid="course-payment-button"
                     className="inline-flex items-center gap-2 px-10 py-4 border border-brand-text text-brand-text font-body text-[11px] tracking-[0.15em] hover:bg-brand-text hover:text-white transition-all duration-300 cursor-pointer"
                   >
-                    ENROLL NOW — &#8377;699
+                    ENROLL NOW — &#8377;1399
                   </a>
                 </div>
               </div>
