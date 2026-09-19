@@ -122,7 +122,7 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Mail size={18} className="text-brand-primary" />
-                      <p className="font-body text-sm text-brand-text">unfunnysinha@gmail.com</p>
+                      <p className="font-body text-sm text-brand-text">theunfunnysinha@gmail.com</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin size={18} className="text-brand-primary" />
